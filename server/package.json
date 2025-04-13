@@ -2,10 +2,9 @@
   "name": "server",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT",
   "type": "module",
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "node index.js",
     "build": "echo 'No build needed for server'"
   },
   "dependencies": {
