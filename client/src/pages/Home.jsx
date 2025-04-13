@@ -8,7 +8,7 @@ const Home = () => {
 
   useEffect(() => {
     const getTodos = async () => {
-      const response = await fetch('http://localhost:3001/api/read-todos', {
+      const response = await fetch('https://to-do-list-a.onrender.com/api/read-todos', {
         method: 'GET',
         headers: {
           authorization: `Bearer ${token}`,
@@ -26,7 +26,7 @@ const Home = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch('http://localhost:3001/api/create-todo', {
+      const response = await fetch('https://to-do-list-a.onrender.com/api/create-todo', {
         method: 'POST',
         headers: {
           authorization: `Bearer ${token}`,
@@ -51,7 +51,7 @@ const Home = () => {
   const handleEdit = async (todoId) => {
     const updatedTodo = prompt('Update your todo');
 
-    const response = await fetch(`http://localhost:3001/api/update-todo/${todoId}`, {
+    const response = await fetch(`https://to-do-list-a.onrender.com/api/update-todo/${todoId}`, {
       method: 'PATCH',
       headers: {
         authorization: `Bearer ${token}`,
@@ -65,7 +65,7 @@ const Home = () => {
   };
 
   const handleDelete = async (todoId) => {
-    const response = await fetch(`http://localhost:3001/api/delete-todo/${todoId}`, {
+    const response = await fetch(`https://to-do-list-a.onrender.com/api/delete-todo/${todoId}`, {
       method: 'DELETE',
       headers: {
         authorization: `Bearer ${token}`,
@@ -79,7 +79,7 @@ const Home = () => {
 
   const handleToggleComplete = async (todoId, currentStatus) => {
     try {
-      const response = await fetch(`http://localhost:3001/api/toggle-todo/${todoId}`, {
+      const response = await fetch(`https://to-do-list-a.onrender.com/api/toggle-todo/${todoId}`, {
         method: 'PATCH',
         headers: {
           authorization: `Bearer ${token}`,
