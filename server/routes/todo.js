@@ -18,17 +18,7 @@ router.post("/create-todo", verifyToken, async (req, res) => {
 });
   
 
-// router.get("/read-todos", verifyToken, async (req, res) => {
-//     const userId = req.userId;
-//     const { status } = req.query; // e.g., /read-todos?status=completed
-    
-//     try {
-//         const todos = await TodoModel.find({userId: userId});
-//         res.status(200).json({ message: "Todo retreived successfully", todos });
-//     } catch (error) {
-//         res.status(500).json({ message: "Error creating todo", error });
-//     }
-// });
+
 
 router.get("/read-todos", verifyToken, async (req, res) => {
     const userId = req.userId;
